@@ -6,28 +6,28 @@ import Image from 'next/image';
 // Gallery categories data
 const categories = [
   {
-    id: 'wedding-1',
-    title: 'Soria & Antoine',
+    id: 'sesiuni',
+    title: 'Sesiuni',
     image: '/galerie/wedding-1.jpg',
-    href: '/galerie/soria-antoine'
+    href: '/galerie/sesiuni'
   },
   {
-    id: 'wedding-2',
-    title: 'Madison & Leniox',
+    id: 'botez',
+    title: 'Botez',
     image: '/galerie/wedding-2.jpg',
-    href: '/galerie/madison-leniox'
+    href: '/galerie/botez'
   },
   {
-    id: 'wedding-3',
-    title: 'Emma & James',
+    id: 'cununie',
+    title: 'Cununie',
     image: '/galerie/wedding-3.jpg',
-    href: '/galerie/emma-james'
+    href: '/galerie/cununie'
   },
   {
-    id: 'wedding-4',
-    title: 'Sophie & Michael',
+    id: 'studio',
+    title: 'Studio',
     image: '/galerie/wedding-4.jpg',
-    href: '/galerie/sophie-michael'
+    href: '/galerie/studio'
   }
 ];
 
