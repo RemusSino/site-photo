@@ -13,12 +13,12 @@ export default function About() {
             {/* Text Content */}
             <div className="space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
-                Since I was a little girl, I dreamt of my perfect day. And now, I get to capture everyone's special day.
+                Since I was a little girl, I dreamt of my perfect day. And now, I get to capture everyone&apos;s special day.
               </h1>
               
               <div className="w-12 h-px bg-black"></div>
               
-              <div className="text-gray-600 space-y-6 text-lg">
+              <div className="text-gray-300 space-y-6 text-lg">
                 <p>
                   Born and raised in Charleston, South Carolina. With over 6 years of professional photography experience, I fell in love with love and photographing weddings has been my favorite event to capture.
                 </p>

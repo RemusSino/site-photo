@@ -40,14 +40,14 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <nav className="flex flex-col gap-4">
-          <Link href="/work" className="text-gray-600 hover:text-black">
-            Work
+          <Link href="/galerie" className="text-gray-600 hover:text-black">
+            Galerie
           </Link>
-          <Link href="/about" className="text-gray-600 hover:text-black">
-            About
+          <Link href="/despre-mine" className="text-gray-600 hover:text-black">
+            Despre mine
           </Link>
-          <Link href="/bookings" className="text-gray-600 hover:text-black">
-            Bookings
+          <Link href="/servicii" className="text-gray-600 hover:text-black">
+            Servicii
           </Link>
         </nav>
       </div>

@@ -1,0 +1,54 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/home/remus/.nvm/v0.11.14/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'firebase-tools' ]
+2 info using npm@1.4.21
+3 info using node@v0.11.14
+4 verbose cache add [ 'firebase-tools', null ]
+5 verbose cache add name=undefined spec="firebase-tools" args=["firebase-tools",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'firebase-tools',
+6 verbose parsed url   path: 'firebase-tools',
+6 verbose parsed url   href: 'firebase-tools' }
+7 silly lockFile 3fa4b23e-firebase-tools firebase-tools
+8 verbose lock firebase-tools /home/remus/.npm/3fa4b23e-firebase-tools.lock
+9 silly lockFile 3fa4b23e-firebase-tools firebase-tools
+10 silly lockFile 3fa4b23e-firebase-tools firebase-tools
+11 verbose addNamed [ 'firebase-tools', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 59c4bcc4-firebase-tools firebase-tools@
+14 verbose lock firebase-tools@ /home/remus/.npm/59c4bcc4-firebase-tools.lock
+15 silly addNameRange { name: 'firebase-tools', range: '*', hasData: false }
+16 verbose request where is /firebase-tools
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 3d246f628af60df0
+19 verbose url raw /firebase-tools
+20 verbose url resolving [ 'https://registry.npmjs.org/', './firebase-tools' ]
+21 verbose url resolved https://registry.npmjs.org/firebase-tools
+22 verbose request where is https://registry.npmjs.org/firebase-tools
+23 silly lockFile 59c4bcc4-firebase-tools firebase-tools@
+24 silly lockFile 59c4bcc4-firebase-tools firebase-tools@
+25 error Error: This request requires auth credentials. Run `npm login` and repeat the request.
+25 error     at RegClient.regRequest [as request] (/home/remus/.nvm/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:107:15)
+25 error     at RegClient.get_ (/home/remus/.nvm/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:141:8)
+25 error     at RegClient.<anonymous> (/home/remus/.nvm/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:52:12)
+25 error     at Object.oncomplete (evalmachine.<anonymous>:93:15)
+26 error If you need help, you may report this *entire* log,
+26 error including the npm and node versions, at:
+26 error     <http://github.com/npm/npm/issues>
+27 error System Linux 6.8.0-52-generic
+28 error command "node" "/home/remus/.nvm/v0.11.14/bin/npm" "install" "-g" "firebase-tools"
+29 error cwd /home/remus/workspace/personal/site-photo
+30 error node -v v0.11.14
+31 error npm -v 1.4.21
+32 verbose exit [ 1, true ]
