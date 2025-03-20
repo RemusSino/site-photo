@@ -28,7 +28,7 @@ export default function TestAccordion() {
     <main className="min-h-screen">
       <Header />
       
-      <section className="py-32 px-4">
+      <section className="pt-32 pb-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-serif text-center mb-12">Test Componentă Acordeon</h1>
           

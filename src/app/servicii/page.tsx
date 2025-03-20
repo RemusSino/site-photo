@@ -73,7 +73,7 @@ export default function Services() {
     <main className="min-h-screen">
       <Header />
       
-      <section className="py-20">
+      <section className="pt-32 pb-20">
       <div className="py-20 px-4 odd:bg-gray-50 text-gray-600 ml-auto">
             <div className="font-serif max-w-3xl mx-auto space-y-6 leading-relaxed">
               {despreMine.map((paragraph, index) => (
