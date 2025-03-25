@@ -12,7 +12,7 @@ const images = Array(10).fill('/galerie/wedding-1.jpg').map((image, index) => ({
 export default function SesiuniPage() {
   return (
     <CategoryCollage
-      title="Galerie : Sesiuni Foto"
+      title="Galerie - Sesiuni Foto"
       images={images}
     />
   );

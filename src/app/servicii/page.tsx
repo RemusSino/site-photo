@@ -2,34 +2,57 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Accordion from '@/components/Accordion';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'Servicii Foto | Adriana Sinorchian Fotografie',
+  description: 'Servicii profesionale de fotografie pentru nunți, botezuri, cununii și sesiuni foto în studio. Află despre pachete și detalii pentru a surprinde cele mai importante momente din viața ta.',
+  alternates: {
+    canonical: '/servicii',
+  },
+  openGraph: {
+    title: 'Servicii Foto | Adriana Sinorchian Fotografie',
+    description: 'Servicii profesionale de fotografie pentru nunți, botezuri, cununii și sesiuni foto în studio.',
+    url: 'https://adrianasinorchian.ro/servicii',
+    images: [
+      {
+        url: '/servicii/wedding.jpg',
+        width: 1200,
+        height: 800,
+        alt: 'Servicii de Fotografie - Adriana Sinorchian',
+      },
+    ],
+  },
+};
 
 // Services data
 const services = [
   {
     id: 1,
-    title: 'Wedding Photography',
-    description: "Capturing your special day with an artistic and documentary approach. From getting ready moments to the last dance, I'll be there to document every precious moment, emotion, and detail that makes your wedding unique. Includes pre-wedding consultation, full-day coverage, and a curated collection of high-resolution images.",
+    title: 'Fotografie de Nuntă',
+    description: "Surprind ziua dumneavoastră specială cu o abordare artistică și documentară. De la momentele de pregătire până la ultimul dans, voi fi acolo pentru a documenta fiecare moment prețios, emoție și detaliu care face nunta dumneavoastră unică. Include consultație pre-nuntă, acoperire pe tot parcursul zilei și o colecție selectată de imagini de înaltă rezoluție.",
     image: '/servicii/wedding.jpg',
     imagePosition: 'right'
   },
   {
     id: 2,
-    title: 'Engagement Sessions',
-    description: "Celebrate your love story with a romantic engagement photoshoot. These relaxed, natural sessions are perfect for getting comfortable in front of the camera before your wedding day. We'll choose a meaningful location and create beautiful, authentic images that reflect your relationship.",
+    title: 'Sedințe Foto',
+    description: "Sărbătoriți povestea voastră de dragoste cu o ședință foto. Aceste sesiuni relaxate și naturale sunt perfecte pentru a vă obișnui cu camera înainte de ziua nunții. Vom alege o locație cu semnificație pentru voi și vom crea imagini frumoase și autentice care reflectă relația voastră.",
     image: '/servicii/engagement.jpg',
     imagePosition: 'left'
   },
   {
     id: 3,
-    title: 'Bridal Portraits',
-    description: 'A dedicated session to capture your bridal beauty in detail. This classic Southern tradition gives you a chance to do a complete trial run of your wedding day look and create stunning portraits in a relaxed environment. Perfect for preserving these once-in-a-lifetime moments.',
+    title: 'Sesiune Foto in Studio',
+    description: 'O sesiune dedicată pentru a surprinde frumusețea miresei în detaliu. Această tradiție clasică vă oferă șansa de a face o probă completă a look-ului pentru ziua nunții și de a crea portrete uimitoare într-un mediu relaxat. Perfect pentru păstrarea acestor momente unice în viață.',
     image: '/servicii/bridal.jpg',
     imagePosition: 'right'
   },
   {
     id: 4,
-    title: 'Destination Weddings',
-    description: 'Your love story knows no bounds, and neither do I. Available for destination weddings worldwide, I bring my signature style and attention to detail wherever your hearts take you. Includes travel arrangements and extended coverage options to capture your entire wedding experience.',
+    title: 'Fotografie de Botez',
+    description: 'Povestea voastră de dragoste nu are limite, și nici eu. Disponibilă pentru nunți în destinații din întreaga lume, aduc stilul meu distinct și atenția pentru detalii oriunde v-ar duce inimile. Include opțiuni pentru aranjamente de călătorie și acoperire extinsă pentru a surprinde întreaga experiență a nunții.',
     image: '/servicii/destination.jpg',
     imagePosition: 'left'
   }
@@ -43,7 +66,7 @@ const faqItems = [
   },
   {
     title: "Care este stilul tău de fotografie?",
-    content: "Stilul meu îmbină fotografia documentară spontană cu portrete regizate artistic. Mă concentrez pe captarea momentelor și emoțiilor autentice, creând în același timp imagini frumoase și atemporale care spun povestea unică a iubirii voastre."
+    content: "Stilul meu îmbină fotografia spontană cu portrete regizate artistic. Mă concentrez pe captarea momentelor și emoțiilor autentice, creând în același timp imagini frumoase și atemporale care spun povestea unică a momentului."
   },
   {
     title: "Oferi ședințe foto de logodnă?",
@@ -65,12 +88,45 @@ const faqItems = [
 
 const despreMine = [
   'Cu o pasiune pentru fotografie care a început în copilărie, am transformat această dragoste într-o carieră dedicată capturării celor mai prețioase momente din viața oamenilor. Specializată în fotografie de nuntă, aduc o abordare artistică și documentară în fiecare eveniment, concentrându-mă pe surprinderea emoțiilor autentice și a momentelor spontane care fac fiecare poveste unică.',
-  'În ultimii zece ani, am avut privilegiul să fotografiez peste 200 de nunți, fiecare cu propria sa magie și personalitate distinctă. Stilul meu combină eleganța fotografiei fine-art cu naturalețea fotojurnalismului, creând astfel imagini care nu sunt doar fotografii, ci amintiri prețioase care vor dăinui generații.',
-  'Lucrez discret și intuitiv, permițând momentelor să se desfășoare natural, în timp ce surprind esența și energia specială a zilei voastre.'
+  'În ultimii ani, am avut privilegiul să fotografiez evenimente publice, cununii, botezuri, precum si alte momente speciale, fiecare cu propria sa magie și personalitate distinctă. Stilul meu combină eleganța fotografiei fine-art cu naturalețea fotojurnalismului, creând astfel imagini care nu sunt doar fotografii, ci amintiri prețioase care vor dăinui generații.',
+  'Lucrez discret și intuitiv, permițând momentelor să se desfășoare natural, în timp ce surprind esența și energia specială a momentului.'
 ]
 export default function Services() {
   return (
     <main className="min-h-screen">
+      <Script id="schema-services" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": services.map((service, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "Service",
+            "name": service.title,
+            "description": service.description,
+            "provider": {
+              "@type": "Person",
+              "name": "Adriana Sinorchian"
+            },
+            "url": `https://adrianasinorchian.ro/servicii#${service.id}`,
+            "image": `https://adrianasinorchian.ro${service.image}`
+          }
+        }))
+      }) }} />
+      
+      <Script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+          "@type": "Question",
+          "name": item.title,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.content
+          }
+        }))
+      }) }} />
+      
       <Header />
       
       <section className="pt-32 pb-20">

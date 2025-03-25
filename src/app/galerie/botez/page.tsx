@@ -12,7 +12,7 @@ const images = Array(10).fill('/galerie/wedding-2.jpg').map((image, index) => ({
 export default function BotezPage() {
   return (
     <CategoryCollage
-      title="Galerie : Botez"
+      title="Galerie - Botez"
       images={images}
     />
   );

@@ -12,7 +12,7 @@ const images = Array(10).fill('/galerie/wedding-4.jpg').map((image, index) => ({
 export default function StudioPage() {
   return (
     <CategoryCollage
-      title="Galerie : Studio"
+      title="Galerie - Fotografie de Studio"
       images={images}
     />
   );

@@ -2,31 +2,109 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'Adriana Sinorchian | Fotografie Profesională',
+  description: 'Servicii profesionale de fotografie pentru nunți, botezuri, cununii și sesiuni foto de studio. Surprinde momentele importante din viața ta cu fotografii autentice și de calitate.',
+};
 
 const images = [
   {
     src: '/wedding-1.jpg',
-    alt: 'Wedding photograph 1'
+    alt: 'Fotografie de nuntă 1'
   },
   {
     src: '/wedding-2.jpg',
-    alt: 'Wedding photograph 2'
+    alt: 'Fotografie de nuntă 2'
   },
   {
     src: '/wedding-3.jpg',
-    alt: 'Wedding photograph 3'
+    alt: 'Fotografie de nuntă 3'
   }
 ];
 
 const despreMine = [
  'Cu o pasiune pentru fotografie care a început în copilărie, am transformat această dragoste într-o carieră dedicată capturării celor mai prețioase momente din viața oamenilor. Specializată în fotografie de nuntă, aduc o abordare artistică și documentară în fiecare eveniment, concentrându-mă pe surprinderea emoțiilor autentice și a momentelor spontane care fac fiecare poveste unică.',
- 'În ultimii zece ani, am avut privilegiul să fotografiez peste 200 de nunți, fiecare cu propria sa magie și personalitate distinctă. Stilul meu combină eleganța fotografiei fine-art cu naturalețea fotojurnalismului, creând astfel imagini care nu sunt doar fotografii, ci amintiri prețioase care vor dăinui generații.',
+ 'În ultimii ani, am avut privilegiul să fotografiez evenimente deosebite, fiecare cu propria sa magie și personalitate distinctă. Stilul meu combină eleganța fotografiei fine-art cu naturalețea, creând astfel imagini care nu sunt doar fotografii, ci amintiri prețioase care vor dăinui generații.',
  'Lucrez discret și intuitiv, permițând momentelor să se desfășoare natural, în timp ce surprind esența și energia specială a zilei voastre.'
 ]
 
 export default function Home() {
   return (
     <main className="relative">
+      <Script id="schema-photographer" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Adriana Sinorchian Fotografie",
+        "image": "https://adrianasinorchian.ro/hero-image.jpg",
+        "url": "https://adrianasinorchian.ro",
+        "@id": "https://adrianasinorchian.ro/#organization",
+        "description": "Servicii profesionale de fotografie pentru nunți, botezuri, cununii și sesiuni foto în studio.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Suceava, Romania"
+        },
+        "telephone": "+40XXXXXXXXX", // Replace with actual phone number
+        "email": "contact@adrianasinorchian.ro", // Replace with actual email
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "sameAs": [
+          "https://instagram.com/adrianasinorchian",
+          "https://facebook.com/adrianasinorchianfotografie",
+          "https://www.fotografi-cameramani.ro/sinorchian-adriana_8439"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicii Fotografie",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fotografie de Nuntă"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fotografie de Botez"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fotografie de Cununie"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sesiuni Foto în Studio"
+              }
+            }
+          ]
+        }
+      }) }} />
+
       <Header />
       
       {/* Hero Section */}

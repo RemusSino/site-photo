@@ -2,6 +2,29 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'Galerie Foto | Adriana Sinorchian Fotografie',
+  description: 'Explorează galeria de fotografii profesionale cu lucrări din sesiuni foto, nunți, botezuri și cununii. Imagini de calitate care surprind emoția și frumusețea momentelor speciale.',
+  alternates: {
+    canonical: '/galerie',
+  },
+  openGraph: {
+    title: 'Galerie Foto | Adriana Sinorchian Fotografie',
+    description: 'Explorează galeria de fotografii profesionale cu lucrări din sesiuni foto, nunți, botezuri și cununii.',
+    url: 'https://adrianasinorchian.ro/galerie',
+    images: [
+      {
+        url: '/galerie/wedding-1.jpg',
+        width: 1200,
+        height: 800,
+        alt: 'Galerie Foto - Adriana Sinorchian',
+      },
+    ],
+  },
+};
 
 // Gallery categories data
 const categories = [
@@ -31,9 +54,23 @@ const categories = [
   }
 ];
 
-export default function Gallery() {
+export default function Galerie() {
   return (
     <main className="min-h-screen">
+      <Script id="schema-gallery" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Galerie Foto",
+        "description": "Explorează galeria de fotografii profesionale cu lucrări din sesiuni foto, nunți, botezuri și cununii.",
+        "url": "https://adrianasinorchian.ro/galerie",
+        "hasPart": categories.map(category => ({
+          "@type": "CollectionPage",
+          "name": `Galerie - ${category.title}`,
+          "url": `https://adrianasinorchian.ro${category.href}`,
+          "image": `https://adrianasinorchian.ro${category.image}`
+        }))
+      }) }} />
+      
       <Header />
       
       {/* Gallery Grid */}

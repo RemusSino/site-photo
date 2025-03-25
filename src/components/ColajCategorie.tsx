@@ -58,10 +58,13 @@ export default function CategoryCollage({ title, images }: CategoryCollageProps)
                 <div className={`relative w-full ${image.aspectRatio} overflow-hidden bg-gray-100`}>
                   <Image
                     src={image.src}
-                    alt={`Photo ${index + 1}`}
+                    alt={`Fotografie ${index + 1}`}
                     fill
+                    loading={index < 4 ? "eager" : "lazy"}
+                    decoding={index < 4 ? "sync" : "async"}
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    unoptimized={true}
                   />
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
@@ -76,7 +79,7 @@ export default function CategoryCollage({ title, images }: CategoryCollageProps)
       <ImageModal
         isOpen={modalOpen}
         onClose={closeModal}
-        currentImage={images[currentImageIndex].src}
+        currentImage={modalOpen ? images[currentImageIndex].src : ''}
         onPrevious={previousImage}
         onNext={nextImage}
         totalImages={images.length}

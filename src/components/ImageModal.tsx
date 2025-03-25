@@ -79,7 +79,7 @@ export default function ImageModal({
       <div className="relative w-[90vw] h-[90vh]">
         <Image
           src={currentImage}
-          alt="Modal image"
+          alt="Imagine mărită"
           fill
           className="object-contain"
           priority

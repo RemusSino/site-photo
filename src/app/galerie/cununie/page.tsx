@@ -12,7 +12,7 @@ const images = Array(10).fill('/galerie/wedding-3.jpg').map((image, index) => ({
 export default function CununiePage() {
   return (
     <CategoryCollage
-      title="Galerie : Cununie"
+      title="Galerie - Cununie"
       images={images}
     />
   );
