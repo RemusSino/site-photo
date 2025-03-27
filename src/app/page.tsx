@@ -1,5 +1,3 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
@@ -105,8 +103,6 @@ export default function Home() {
         }
       }) }} />
 
-      <Header />
-      
       {/* Hero Section */}
       <div className="relative h-screen w-full">
         {/* Background Image */}
@@ -168,7 +164,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

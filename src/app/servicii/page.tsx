@@ -1,5 +1,3 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Accordion from '@/components/Accordion';
 import { Metadata } from 'next';
@@ -127,8 +125,6 @@ export default function Services() {
         }))
       }) }} />
       
-      <Header />
-      
       <section className="pt-32 pb-20">
       <div className="py-20 px-4 odd:bg-gray-50 text-gray-600 ml-auto">
             <div className="font-serif max-w-3xl mx-auto space-y-6 leading-relaxed">
@@ -196,8 +192,6 @@ export default function Services() {
           <Accordion items={faqItems} className="text-gray-700 mb-12" />
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 } 

@@ -1,5 +1,3 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
@@ -71,8 +69,6 @@ export default function Galerie() {
         }))
       }) }} />
       
-      <Header />
-      
       {/* Gallery Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -107,7 +103,6 @@ export default function Galerie() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 } 

@@ -1,5 +1,3 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import Script from 'next/script';
@@ -43,8 +41,6 @@ export default function About() {
         ]
       }) }} />
       
-      <Header />
-      
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -80,8 +76,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 } 

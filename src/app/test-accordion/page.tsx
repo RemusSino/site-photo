@@ -1,8 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Accordion from '@/components/Accordion';
 
 const testItems = [
@@ -26,7 +24,6 @@ export default function TestAccordion() {
 
   return (
     <main className="min-h-screen">
-      <Header />
       
       <section className="pt-32 pb-20 px-4">
         <div className="max-w-4xl mx-auto">
@@ -53,7 +50,6 @@ export default function TestAccordion() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 } 
